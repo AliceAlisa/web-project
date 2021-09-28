@@ -1,4 +1,4 @@
-import { sound } from './soundClick.js'
+import { theSound } from './soundClick.js'
 
 const startBtn = document.getElementById('start-btn');
 const stopBtn = document.getElementById('stop-btn');
@@ -12,7 +12,7 @@ export default () => {
 
             stopBtn.addEventListener('click', () => {
                 clearInterval(countDownStart);
-                sound.play();
+                theSound.play();
             })
 
             userTime.stepDown();
@@ -20,7 +20,7 @@ export default () => {
 
             if (userTime.value == "00:00:00") {
                 clearInterval(countDownStart);
-                sound.play();
+                theSound.play();
             }
         }, 1000);
     })
