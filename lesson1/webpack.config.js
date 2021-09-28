@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 
 module.exports = {
     entry: './js/main.js',
@@ -30,7 +31,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: resolve(__dirname, 'index.html')
-        })
+        }),
+        new BundleAnalyzerPlugin()
 
     ]
 };
