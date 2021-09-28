@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
+
+</head>
+
+<body>
+    <button id="timer-btn">Таймер</button>
+    <button id="calc-btn">Калькулятор Дат</button>
+
+    <div id="timer" class="hidden">
+        <h3>Таймер</h3>
+        <input type="time" step="1" name="timer-input" id="user-time">
+        <p id="timer-display"></p>
+        <button id="start-btn">Старт</button>
+        <button id="stop-btn">Стоп</button>
+    </div>
+
+    <form id="calcDate" class="hidden">
+        <h3>Калькулятор дат</h3>
+        <label>
+            <strong>Первая дата: </strong>
+            <input type="date" name="firstDate">
+        </label>
+
+        <label>
+            <strong>Вторая дата: </strong>
+            <input type="date" name="secondDate">
+        </label>
+        <button type="submit">Рассчитать промежуток</button>
+        <p id="result"></p>
+    </form>
+</body>
+
+</html>
